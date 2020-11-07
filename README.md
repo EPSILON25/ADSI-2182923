@@ -22,6 +22,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*
 
 # Cada que se realice un comando nuevo en el editar en CMD agregar git add . realizar commit -m "La versión" solicitar git status y luego ejecutar el push.
 
-# :smile
+# :smirk
+
+# :wink
+
+
 
 ***Guardar***
