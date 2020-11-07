@@ -2,7 +2,7 @@
 
 ## ADSI-2182923
 
-####### Repositorio del TGO en Análisis y Desarrollo de Sistemas de Información
+###### Repositorio del TGO en Análisis y Desarrollo de Sistemas de Información
 
 ***Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -20,6 +20,8 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.*
 
-# Cada que se realice un comando nuevo en el editar en CMD agregar git add . solicitar git status y luego ejecutar el push
+# Cada que se realice un comando nuevo en el editar en CMD agregar git add . realizar commit -m "La versión" solicitar git status y luego ejecutar el push.
+
+# :D
 
 ***Guardar***
