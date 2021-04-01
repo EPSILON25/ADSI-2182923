@@ -1,0 +1,65 @@
+Proceso EJERCICIO2_14
+	//Un alumno desea saber cuál será su calificación final en la materia de Algoritmos. Dicha calificación se compone de los siguientes porcentajes:
+	//35% del promedio de sus tres calificaciones parciales.
+	//35% de la calificación del examen final.
+	//30% de la calificación de un trabajo final.
+	//El algoritmo debe validar si el alumno tuvo puntos adicionales para la calificación
+	//del trabajo final, el cual puede ser hasta máximo un 5%.
+	
+	Definir nota1, nota2, nota3, examen_final, promedio_parciales, trabajo_final, porcentaje_puntos_adic, puntos_porcen_adic_trabajo, puntos_totales_trabajo_final, calificacion_final  Como Real;
+	Definir total_notas, i, nota, cantidad_notas Como Real;
+	//Escribir "Ingrese las notas de sus calificaciones parciales";
+	//Leer nota1, nota2, nota3;
+	//promedio_parciales <- (nota1 + nota2 + nota3)/3;
+	
+	total_notas <- 0;
+	cantidad_notas <- 0;
+	Para i<-1 hasta 10 Con Paso 1 Hacer
+		Escribir "Ingrese la nota de su parcial ",i;
+		Leer nota;
+		total_notas <- total_notas + nota; // Variable Acumulador
+		cantidad_notas <- cantidad_notas + 1; // Variable Contador
+	FinPara	
+	promedio_parciales <- total_notas / 10;
+	Escribir "El promedio de notas es: ",promedio_parciales;
+	Escribir "La cantidad de notas es: ",cantidad_notas;
+	
+	Escribir "Ingrese la calificación del examen final";
+	Leer examen_final;
+	
+	mientras (examen_final<0 o examen_final>5) Hacer
+		Escribir "Valor incorrecto, digite de nuevo la calificación del examen final";
+		Leer examen_final;
+	FinMientras
+	
+	Escribir "Ingrese la nota del trabajo final";
+	Leer trabajo_final;
+	
+	si (trabajo_final < 5)Entonces
+		//Escribir "Cual es porcentaje de puntos del trabajo final";
+		//Leer porcentaje_puntos_adic;
+		Repetir
+			Escribir "Digite de manera correcta el porcentaje de puntos del trabajo final (0-5)";
+			Leer porcentaje_puntos_adic;
+		Hasta Que (porcentaje_puntos_adic>=0 y porcentaje_puntos_adic<=5)
+	FinSi	
+	
+	
+	
+	si (trabajo_final = 5 o porcentaje_puntos_adic = 0) Entonces
+		calificacion_final <- (promedio_parciales*0.35) + (examen_final*0.35) + (trabajo_final*0.30);
+	SiNo
+		puntos_porcen_adic_trabajo <- porcentaje_puntos_adic * 5 / 30;
+		puntos_totales_trabajo_final <- (puntos_porcen_adic_trabajo + trabajo_final) * 0.30;
+		
+		Escribir "Puntos totales: ", puntos_totales_trabajo_final;
+		// En caso de que el usuario haya sacado entre su nota y el adicional, una nota > 5
+		si (puntos_totales_trabajo_final >= 1.5) Entonces
+			calificacion_final <- (promedio_parciales*0.35) + (examen_final*0.35) + 1.5;
+		SiNo
+			calificacion_final <- (promedio_parciales*0.35) + (examen_final*0.35) + puntos_totales_trabajo_final;
+		FinSi
+	FinSi
+	
+	Escribir "La calificación final es: ", calificacion_final;
+FinProceso

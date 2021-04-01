@@ -1,0 +1,29 @@
+Proceso EJERCICIO2_15
+	//Escriba un algoritmo que dado el número de horas legales y extras trabajadas
+	//por un empleado diariamente y el sueldo por hora legal, calcule el sueldo total
+	//de ese empleado. Tenga en cuenta que las horas extras se pagan al doble de la
+	//hora legal. Las horas legales diarias no deben superar las 8 horas y las horas extras
+	// no deben superar las 4 horas.
+	
+	//Definir Variables
+	
+	Definir C_hora_l,C_hora_e,valor_hora,sueldo_total,valor_extra Como Real;
+	Definir Empleado Como Cadena;
+	
+	//Asignar Variables
+	
+	Escribir "Ingrese su nombre";
+	Leer Empleado;
+	Escribir "Por favor ingrese la siguiente información:  Valor Hora=   - Cantidad de Horas Legales=    - Cantidad de Horas Extras=    ";
+	Leer valor_hora,C_hora_l,C_hora_e;
+	Mientras (C_hora_l>8) o (C_hora_e>4) Hacer
+		Escribir "Verifique las horas digitadas  - Cantidad de Horas Legales=    - Cantidad de Horas Extras=    ";
+		Leer C_hora_l,C_hora_e;
+	FinMientras
+	valor_extra<-valor_hora*2;
+	sueldo_total<-(C_hora_e*valor_extra)+(valor_hora*C_hora_l);
+	
+	Escribir "Para el trabajador ",Empleado," el sueldo total es : $",sueldo_total;
+	
+	
+FinProceso

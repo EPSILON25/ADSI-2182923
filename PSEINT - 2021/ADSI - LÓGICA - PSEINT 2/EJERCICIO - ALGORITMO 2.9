@@ -1,0 +1,23 @@
+Proceso EJERCICIO2_9
+	//La gasolinera muralla le acaban de llegar
+	//Seis bombas despachadoras de gasolina
+	// normal, el problema es que al despachar 
+	//cierta cantidad de gasolina lo registra en galones
+	//pero el precio de la gasolina está fijado en litros.
+	//Algoritmo que calcule e imprima lo que se debe cobrar al cliente 
+	// Se introducirá la cantidad de galones y el precio por litro
+	
+	//Definir variables
+	
+	Definir Precio_galon, Precio_litro, Cantidad_Venta, Galon Como Real;
+	
+	// Asignar variables
+	Escribir "Digite la cantidad de galones";
+	Leer Cantidad_Venta;
+	Escribir "Digite el precio por Litro";
+	Leer Precio_litro;
+	
+	Galon<-3.785;
+	Precio_galon<-(Cantidad_Venta*Galon)*Precio_litro;
+	Escribir "Su factura a pagar es de: $", Precio_galon," pesos";
+FinProceso

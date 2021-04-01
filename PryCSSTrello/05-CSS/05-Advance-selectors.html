@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Selectors</title>
+    <style>
+        section > p {
+            background-color:lightgreen;
+        }
+        h3+h4,
+        h3+h4+h4 {
+            background-color: lightblue;
+        }
+        ul li[class~="color"]{background: lime;}
+    </style>
+</head>             
+<body>
+    <h3> Children </h3>
+    <section>
+        <header>
+            <p>Lorem ipsum</p>
+        </header>
+        <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur omnis quidem, reprehenderit exercitationem nesciunt voluptatum voluptate reiciendis at similique quis accusamus sapiente molestiae aliquid fuga autem laboriosam deleniti velit soluta!
+        </p>
+    </section>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet ea facilis cupiditate exercitationem laboriosam quas! Ex fuga dicta eos corporis incidunt, temporibus atque voluptates ab iure ad esse aperiam.</h3>
+    <h4>Dolor sit amet</h4>
+    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta iste minima illo fugit quos atque eaque ab aliquid eos voluptatibus asperiores dolores autem ea, nam voluptates, sapiente, sunt dignissimos maxime.</h4>
+    <h3>Attribute</h3>
+
+    <ul>
+        <li class="color">Element 1</li>
+        <li>Element 2</li>
+        <li class="color">Element 3</li>
+        <li>Element 4</li>
+        <li class="color">Element 5</li>
+    </ul>
+
+</body>
+</html>

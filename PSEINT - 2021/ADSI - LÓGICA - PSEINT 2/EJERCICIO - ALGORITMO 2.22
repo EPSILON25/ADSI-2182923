@@ -1,0 +1,28 @@
+Proceso EJERCICIO2_22
+	// Un vendedor recibe un sueldo base de $500000 más un 10 MOD  extra por comisión
+	// de sus ventas, el vendedor desea saber cuánto dinero obtendrá por concepto de 
+	// comisiones por las tres ventas que realiza en el mes y el total que recibirá en el
+	// mes tomando en cuenta su sueldo base y comisiones.
+	// Modificar el ejercicio anterior para que el usuario ingrese la cantidad de ventas
+	// que hace en un mes con su respectivo valor y así mismo preguntar por los valores
+	// de los 12 meses del año. Se hará un incremento del 5 MOD  cada que se avance de mes.
+	// Decir al final cuánto gana el vendedor al año
+	// Definir Variables
+		Definir i,e,venta_mes,cantidad_mes,total_mes,sueldo Como Real;
+	i <- 1; e <- 1; total_mes <- 0;
+	Mientras (i>0) Y (i<=12) Hacer
+		Escribir 'Ingrese la cantidad de ventas realizadas en el mes :',i;
+		Leer cantidad_mes;
+		Mientras e<=cantidad_mes Hacer
+			Escribir 'Ingrese el monto de la venta: ';
+			Leer venta_mes;
+			e <- e+1;
+			total_mes <- (total_mes+venta_mes);
+		FinMientras
+		e <- 1;
+		i <- i+1;
+	FinMientras
+	total_mes <- total_mes*0.05;
+	sueldo <- 500000*12+total_mes;
+	Escribir 'El sueldo anual salario + comisiones es de: $',sueldo;
+FinProceso

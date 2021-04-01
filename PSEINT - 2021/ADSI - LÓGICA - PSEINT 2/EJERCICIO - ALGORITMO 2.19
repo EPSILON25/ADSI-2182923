@@ -1,0 +1,23 @@
+	Proceso EJERCICIO2_19
+
+	//Definir Variables
+	Definir Salario_actual, Prestamo, Imp_ReteFuente, Salud_Pension, Ahorro, Subsidio Como Real;
+	Definir Nombre Como Cadena;
+	//Asignar Variables
+	
+	Imp_ReteFuente<-0.1;
+	Salud_Pension<-0.12;
+	Ahorro<-0.03;
+	Subsidio<-0.04;
+	Prestamo<-0.2;
+	Escribir "Ingrese nombre y Salario actual";
+	Leer Nombre,Salario_actual;
+	
+	Si Salario_actual > 4000000 Entonces
+		Salario_actual<-Salario_actual-((Salario_actual*Imp_ReteFuente)+(Salario_actual*Salud_Pension)+(Salario_actual*Ahorro)+(Salario_actual*Prestamo))+(Salario_actual*Subsidio);
+		Escribir "Para el empleado: ",Nombre," el salario final es $",Salario_actual;
+	SiNo
+		Salario_actual<-Salario_actual-((Salario_actual*Salud_Pension)+(Salario_actual*Ahorro)+(Salario_actual*Prestamo))+(Salario_actual*Subsidio);;
+		Escribir "Para el empleado: ",Nombre," el salario final es $",Salario_actual;
+	FinSi
+FinProceso

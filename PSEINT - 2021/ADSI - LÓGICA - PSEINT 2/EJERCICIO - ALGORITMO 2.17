@@ -1,0 +1,14 @@
+	Proceso EJERCICIO2_17
+	//Calcula la cantidad de gasolina en galones que se gasta en un viaje tomando en
+	//cuenta el número de kilómetros que se van a recorrer, sabiendo que el carro
+	//consume 1 galón de gasolina en 55 kilómetros.
+	
+	//Definir Variables
+	Definir Recorrido, Galon, Gasolina Como Real;
+	//Asignar Variables
+	Galon<-55;
+	Escribir "Indique cuántos Kilometros va a recorrer";
+	Leer Recorrido;
+	Gasolina<-Recorrido/Galon;
+	Escribir "La cantidad de gasolina necesaria para el viaje es de: ",Gasolina," galones";
+FinProceso

@@ -1,0 +1,24 @@
+Proceso EJERCICIO2_2
+	//Un maestro desea saber qué porcentaje de hombres y que porcentaje de
+	//mujeres hay en un grupo de estudiantes, conociendo la cantidad de hombres y
+	//la cantidad de mujeres.
+	
+	//Definir Variables
+	
+	Definir Hombres Como Entero;
+	Definir Mujeres Como Entero;
+	Definir Porcentaje_Mujeres Como Real;
+	Definir Porcentaje_Hombre Como Real;
+	
+	//Asignar Variables
+	
+	Escribir "Digite cantidad de Hombres en el aula";
+	Leer Hombres;
+	Escribir "Digite cantidad de Mujeres en el aula";
+	Leer Mujeres;
+	
+	Porcentaje_Hombre<-Hombres*100/(Hombres+Mujeres);
+	Porcentaje_Mujeres<-Mujeres*100/(Hombres+Mujeres);
+	
+	Escribir "El porcentaje se distribuye de la siguiente manera: ", "Porcentaje Hombre: ",Porcentaje_Hombre,"%"," Porcentaje Mujeres: ",Porcentaje_Mujeres,"%";
+FinProceso

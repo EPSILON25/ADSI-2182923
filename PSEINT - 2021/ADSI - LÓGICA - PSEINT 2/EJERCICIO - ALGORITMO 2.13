@@ -1,0 +1,17 @@
+Proceso EJERICICIO2_13
+	//Se necesita realizar un conversor de temperatura que pase de grados Centígrados a grados Farenheit. El algoritmo solicitará los grados Centígrados y
+	//deberá mostrar el resultado en grados Farenheit.
+	//a fórmula de conversión es la siguiente. oF = oC x 1,8 + 3
+	
+	//Definir variables
+	
+	Definir Grados,gF,gC Como Real;
+	
+	Escribir "Ingrese los grados centígrados";
+	Leer gC;
+	
+	gF<-gC+1.8+3;
+	
+	Escribir "El valor ingresado en Farenheit es de: ",gF;
+	
+FinProceso

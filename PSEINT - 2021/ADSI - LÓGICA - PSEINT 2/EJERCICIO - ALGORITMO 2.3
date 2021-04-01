@@ -1,0 +1,21 @@
+Proceso EJERCICIO2_3
+	// Calcular el número de pulsaciones que una persona debe tener por cada 10
+	//segundos de ejercicio, si la fórmula es:
+	//num. pulsaciones = (220 - edad)/10
+	//Este algoritmo solo puede ser ejecutado por mayores de edad
+	
+	//Definir Variables
+	
+	Definir Edad Como Entero;
+	Definir Num_Pulsa Como Real;
+	
+	Escribir "Ingrese su edad";
+	Leer Edad;
+	Si Edad>=18 Entonces
+		Num_Pulsa<-(220-Edad)/10;
+		Escribir "El número de pulsaciones para su edad es de: ",Num_Pulsa;
+	SiNo
+		Escribir "No se puede seguir con el cálculo";
+	FinSi
+	
+FinProceso

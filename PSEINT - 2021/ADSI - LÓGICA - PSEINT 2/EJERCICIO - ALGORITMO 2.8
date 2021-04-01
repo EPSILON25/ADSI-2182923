@@ -1,0 +1,24 @@
+Proceso EJERCICIO2_8
+	//Desarrollar un algoritmo que solicite el largo y 
+	//el ancho de un rectángulo y calcule
+	//e imprima el área y el perímetro del mismo. 
+	//Validar que los números sean
+	//mayores a cero y no sean iguales, si es así volver a pedir ambos datos.
+	
+	//Definir Variables
+	Definir largo,ancho,Area,Perimetro Como Real;
+	//Asignar Variables
+	
+	Escribir "Ingrese el Largo y el Ancho";
+	Leer largo,ancho;
+	
+	Mientras (largo=ancho) o (largo=0 o ancho=0) Hacer
+		Escribir "Verífique el número";
+		Leer largo,ancho;
+	FinMientras
+	Area<-(largo*ancho);
+	Perimetro<-(largo*2+ancho*2);
+	
+	Escribir "El area del rectángulo es: ",Area," y el perimetro es: ",Perimetro;
+	
+FinProceso

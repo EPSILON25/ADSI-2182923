@@ -1,0 +1,32 @@
+Proceso EJERCICIO2_10
+	
+	//El Zoológico La Pastora desea tener un informe estadístico de sus rinocerontes
+	//con respecto a su longevidad, tal que da como datos el nombre de un
+	//rinoceronte, su edad, su peso, y su longitud, expresados estos dos últimos en
+	//libras y pies respectivamente. Desarrollar un algoritmo que imprima el nombre
+	//del rinoceronte, su edad, su peso expresado en kilogramos y su longitud
+	//expresada en metros.Esta actividad se realiza con las siguientes reglas de conversión.
+	//libra = 0,45 kilogramos
+	//pie = 0,3048 metros
+	
+	//Definir Variables
+	Definir Nombre Como Cadena;
+	Definir edad, peso, long, kilo, metros, libra, pie Como Real;
+	Escribir "Por favor digite el nombre del rinoceronte:";
+	Leer Nombre;
+	Escribir "Por favor digite la edad en años:";
+	Leer edad;
+	Escribir "Por favor digite el peso en libras:";
+	Leer peso;
+	Escribir "Por favor digite la longitud en pies:";
+	Leer long;
+		
+	pie<-0.3048;
+	libra<-0.45;
+	
+	metros<-long*pie;
+	kilo<-libra*peso;
+	
+	Escribir "Información del Rinoceronte: -",nombre," ","- Edad: ",edad," años ","- Kilos de peso: ",kilo,"- Longitud en metros: ",metros;
+	
+FinProceso

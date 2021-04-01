@@ -1,0 +1,26 @@
+Proceso EJERCICIO2_11
+	// Realizar una calculadora con las operaciones básicas. El usuario ingresa dos
+	// números y se debe mostrar el resultado de la suma, la resta, la división y la
+	// multiplicación de ambos. Los números deben ser mayores a cero
+	// Definir Variables
+	Definir Num1,Num2,Suma,Resta,Multi,Divi Como Real;
+	Escribir 'Ingrese el primer número';
+	Leer Num1;
+	Escribir 'Ingrese el segundo número';
+	Leer Num2;
+	Mientras Num1=0 O Num2=0 Hacer
+		Escribir 'Verifique el número';
+		Escribir 'Ingrese el primer número';
+		Leer Num1;
+		Escribir 'Ingrese el segundo número';
+		Leer Num2;
+	FinMientras
+	Suma <- Num1+Num2;
+	Resta <- Num1-Num2;
+	Multi <- Num1*Num2;
+	Divi <- Num1/Num2;
+	Escribir 'Resultado de la suma de ',Num1,'+',Num2,'=',Suma;
+	Escribir 'Resultado de la resta de ',Num1,'-',Num2,'=',Resta;
+	Escribir 'Resultado de la multiplicación de ',Num1,'/',Num2,'=',Multi;
+	Escribir 'Resultado de la división de ',Num1,'*',Num2,'=',Divi;
+FinProceso

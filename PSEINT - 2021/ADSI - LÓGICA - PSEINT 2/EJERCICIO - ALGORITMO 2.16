@@ -1,0 +1,54 @@
+Proceso EJERCICIO2_16
+	// Un banco realiza créditos de libre inversión con plazos de 12 meses y un interés
+	// anual del 18 MOD .
+	// Realizar un algoritmo que, dado el valor del crédito, calcule y muestre el valor de
+	// la cuota a pagar mensualmente (La cuota a pagar incluye el abono a capital más
+	// el interés mensual).
+	// El algoritmo también debe permitir el ingreso de los puntos datacrédito de la
+	// persona teniendo la siguiente tabla de valores máximos a prestar, según dicho puntaje:
+	// 0 No se le presta a la persona (en este caso se mostrará un mensaje diciendo que la persona está reportada en datacrédito y no podrá acceder al préstamo. 
+	// 1-300 7.000.000 // 301-600 14.000.000 // 601-900 21.000.000 // 901-1200 30.000.000 // 1201-1500 50.000.000// 1500-1800 100.000.000//	
+	// Definir Variables
+	Definir Nombre_Completo Como Caracter;
+	Definir Prestamo1,Prestamo2,Prestamo3,Prestamo4,Prestamo5,Prestamo6,Datacredito,Cuota,Interes Como Real;
+	Prestamo1 <- 7000000; Prestamo2 <- 14000000; Prestamo3 <- 21000000; Prestamo4 <- 30000000; Prestamo5 <- 50000000; Prestamo6 <- 100000000;
+	Escribir 'Bienvenido a la Simulación';
+	Escribir 'Por favor digite el nombre del interesado';
+	Leer Nombre_Completo;
+	Escribir 'Revisemos historial de crediticio';
+	Escribir 'Indique por favor el SCORE DATA CREDITO DEL CLIENTE';
+	Leer Datacredito;
+	Si (Datacredito=0) Entonces
+		Escribir 'Lo sentimos, la persona evaluada está reportada en datacrédito y no podrá acceder al préstamo. Hasta luego.';
+	SiNo
+		Si (Datacredito>1) Y (Datacredito<300) Entonces
+			Interes <- (Prestamo1/12)*(18/12);
+			Escribir 'El préstamo aprobado es: $',Prestamo1,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+		SiNo
+			Si (Datacredito>300) Y (Datacredito<600) Entonces
+				Interes <- (Prestamo2/12)*(18/12);
+				Escribir 'El préstamo aprobado es: $',Prestamo2,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+			SiNo
+				Si (Datacredito>=601) Y (Datacredito<900) Entonces
+					Interes <- (Prestamo3/12)*(18/12);
+					Escribir 'El préstamo aprobado es: $',Prestamo3,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+				SiNo
+					Si (Datacredito>=901) Y (Datacredito<1200) Entonces
+						Interes <- (Prestamo4/12)*(18/12);
+						Escribir 'El préstamo aprobado es: $',Prestamo4,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+					SiNo
+						Si (Datacredito>=1201) Y (Datacredito<1500) Entonces
+							Interes <- (Prestamo5/12)*(18/12);
+							Escribir 'El préstamo aprobado es: $',Prestamo5,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+						SiNo
+							Si (Datacredito>=1501) Y (Datacredito<=1800) Entonces
+								Interes <- (Prestamo6/12)*(18/12);
+								Escribir 'El préstamo aprobado es: $',Prestamo6,' y quedarían 12 cuotas mensuales de $',Interes,' con el interés ya incluído';
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi		
+	FinSi
+FinProceso

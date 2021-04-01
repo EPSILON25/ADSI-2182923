@@ -1,0 +1,10 @@
+Proceso EJERCICIO2_20
+	Definir Capital, Interes, Ganancia, Meses Como Real;
+	Interes<-0.025;
+	Escribir "Ingrese el monto a invertir";
+	Leer Capital;
+	Escribir "Indique la cantidad de meses de inversión";
+	Leer Meses;
+	Ganancia<-Capital+(Capital*Interes*Meses);
+	Escribir "Su inversión fue de: $",Capital," y su ganancia sería de: $",Ganancia;
+FinProceso

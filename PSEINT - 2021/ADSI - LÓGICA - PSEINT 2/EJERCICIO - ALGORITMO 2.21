@@ -1,0 +1,22 @@
+Proceso EJERCICIO2_21
+	//Un vendedor recibe un sueldo base de $500000 más un 10% extra por comisión
+	//de sus ventas, el vendedor desea saber cuánto dinero obtendrá por concepto de 
+	//comisiones por las tres ventas que realiza en el mes y el total que recibirá en el
+	//mes tomando en cuenta su sueldo base y comisiones.
+	//Definir Variables
+	Definir T_Venta,Sueldo,Comision,Venta,i Como Real;
+	Definir Vendedor Como Cadena;
+	T_Venta<-0;
+	//Asignar Variables
+	Escribir "Digite el nombre del venedor";
+	Leer Vendedor;
+	Para i<- 1 hasta 3 Con Paso 1 Hacer 
+		Escribir "Ingrese la ganancia venta ",i;
+		Leer Venta;
+		T_Venta<-T_Venta+Venta;
+	FinPara
+	Comision<-T_Venta*0.1;
+	Sueldo<-Comision+500000;
+	Escribir "La comision del vendedor es: $",Comision;
+	Escribir "El salario final para ",Vendedor," es: $",Sueldo;
+FinProceso

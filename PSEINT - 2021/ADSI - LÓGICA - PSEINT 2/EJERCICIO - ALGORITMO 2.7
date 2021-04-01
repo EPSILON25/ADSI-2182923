@@ -1,0 +1,30 @@
+Proceso EJERICIO2_7
+	// Desarrollar un algoritmo para calcular el promedio de un estudiante, 
+	// se pedirá la matricula del estudiante y cinco calificaciones de los exámenes 
+	// (las notas estarán entre 0 y 5, si se ingresa otro valor se debe volver a preguntar 
+	// al usuario los datos). Se imprimirá la matricula del estudiante y el promedio.
+	Definir promedio,total,calificacion,matricula,cont Como Real;
+	Escribir 'Ingrese la matrícula ';
+	Leer matricula;
+	Escribir 'Nota Matemáticas ';
+	Escribir 'Nota Español ';
+	Escribir 'Nota Algebra ';
+	Escribir 'Nota Ética ';
+	Escribir 'Nota Química ';
+	cont <- 1;
+	total <- 0;
+	Mientras (cont<=5) Hacer
+		Escribir 'Por favor digite la calificación ',cont;
+		Leer calificacion;
+		// Validación para que la nota esté entre 0 y 5
+		Mientras (calificacion<0 O calificacion>5) Hacer
+			Escribir 'La calificación es inválida, ingresela de nuevo';
+			Leer calificacion;
+		FinMientras
+		total <- total+calificacion;
+		cont <- cont+1;
+	FinMientras
+	promedio <- total/5;
+	Escribir 'La matrícula es: ',matricula;
+	Escribir 'El promedio es: ',promedio;
+FinProceso

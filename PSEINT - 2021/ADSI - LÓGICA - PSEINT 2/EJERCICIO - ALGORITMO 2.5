@@ -1,0 +1,21 @@
+Proceso EJERCICIO2_5
+	//Tres personas deciden invertir su dinero para fundar una empresa. Cada una de
+	//ellas invierte una cantidad distinta. Obtener el porcentaje que cada quien
+	//invierte con respecto a la cantidad total invertida
+	//Definir Variables
+	Definir Socio1,Socio2,Socio3 Como Cadena;
+	Definir Monto1,Monto2,Monto3,Partici1,Partici2,Partici3 Como Real;
+	Definir InvTotal Como Real;
+	//Asignar Variables
+	Escribir "Nombre del Inversionista 1 y cuanto invierte:";
+	Leer Socio1,monto1;
+	Escribir "Nombre del Inversionista 2 y cuanto invierte:";
+	Leer Socio2,monto2;
+	Escribir "Nombre del Inversionista 3 y cuanto invierte:";
+	Leer Socio3,monto3;
+	InvTotal<-(monto1+monto2+monto3);
+	Partici1<- monto1*100/(InvTotal);
+	Partici2<-monto2*100/(InvTotal);
+	Partici3<-monto3*100/(InvTotal);
+	Escribir "El porcentaje de participación se distribuye de la siguiente manera: ", Socio1," ",Partici1,"% ",Socio2," ",Partici2,"% ",Socio3," ",Partici3,"% ";
+FinProceso

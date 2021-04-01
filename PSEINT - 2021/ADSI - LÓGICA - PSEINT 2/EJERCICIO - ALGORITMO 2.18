@@ -1,0 +1,32 @@
+Proceso EJERCICIO2_18
+	// Calcular el monto a pagar en una cabina de Internet si el costo por hora o fracción
+	// es de $1500. Si la persona consume más de 3 horas, las siguientes horas le
+	// saldrán un 30 MOD  más económico. Por cada hora también se darán 5 puntos que
+	// son acumulables para luego canjearlos por más tiempo. Decir al final cuantos
+	// puntos obtuvo la persona. El tiempo se debe preguntar al usuario en minutos
+	// Definir Variables
+	Definir Monto_Pagar,Tiempo,Hora_Fraccion,X,i,Descuento,Puntos,Diferencia Como Real;
+	// Asignar Variables
+	Hora_Fraccion <- 1500;
+	i <- 0;
+	Puntos <- 0;
+	Descuento <- 0.3;
+	Escribir 'Ingrese el tiemp consumido: ';
+	Leer Tiempo;
+	Si Tiempo>=60 Entonces
+		X <- Redon(Tiempo/60);
+		Si X>3 Entonces
+			Diferencia <- X-3;
+			Monto_Pagar <- (3*Hora_Fraccion)+Diferencia*Hora_Fraccion*Descuento;
+		SiNo
+			Monto_Pagar <- X*Hora_Fraccion;
+		FinSi
+		Para i<-1 Hasta X Con Paso 1 Hacer
+			Puntos <- Puntos+5;
+		FinPara
+		Escribir 'El consumo en horas es de: ',X,' El monto a pagar es de: $',Monto_Pagar,' y acumula un total de: ',Puntos,' Puntos';
+	SiNo
+		Monto_Pagar <- Hora_Fraccion;
+		Escribir 'Consumo en minutos: ',Tiempo,' El monto a pagar por fracción es de: $',Monto_Pagar;
+	FinSi
+FinProceso
